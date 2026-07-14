@@ -3,11 +3,11 @@
 
     // ===== CONFIG DO POPUP UPSELL =====
     var UPSELL = {
-      checkoutPagina:   'https://pay.wiapy.com/u8Lr8FTWrd',
-      checkoutCompleto: 'https://pay.wiapy.com/Dc-HpAeSV',
-      checkoutBasico:   'https://pay.wiapy.com/jAOcPoRUye',
+      checkoutPagina:   'https://pay.cakto.com.br/3cguiwc_981580',
+      checkoutCompleto: 'https://pay.cakto.com.br/gddhz74',
+      checkoutBasico:   'https://pay.cakto.com.br/8pnfsrx_981393',
       precoOriginal:    'R$37,90',
-      precoDesconto:    'R$29,90'
+      precoDesconto:    'R$28,90'
     };
 
     // ===== REDIRECIONAMENTO COM PARÂMETROS =====
@@ -21,6 +21,11 @@
       } catch(e) {
         window.location.href = url + window.location.search;
       }
+    }
+
+    function dispararInitiateCheckout(origem) {
+      if (typeof fbq !== 'function') return;
+      fbq('track', 'InitiateCheckout', { origem: origem });
     }
 
     // ===== POPUP UPSELL =====
@@ -41,6 +46,7 @@
       if (btnCompletoLink) {
         btnCompletoLink.addEventListener('click', function(e) {
           e.preventDefault();
+          dispararInitiateCheckout('completo');
           irParaCheckout(UPSELL.checkoutPagina);
         });
       }
@@ -58,11 +64,13 @@
 
       btnYes.addEventListener('click', function(e) {
         e.preventDefault();
+        dispararInitiateCheckout('upsell-completo');
         irParaCheckout(UPSELL.checkoutCompleto);
       });
 
       function goBasico() {
         closePopup();
+        dispararInitiateCheckout('basico');
         irParaCheckout(UPSELL.checkoutBasico);
       }
 

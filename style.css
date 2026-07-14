@@ -891,8 +891,8 @@
     #upsell-close:hover { color: var(--dark); }
     .upsell-tag {
       display: inline-block;
-      background: #fff3cd;
-      color: #856404;
+      background: #E63946;
+      color: #FFFF;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .06em;
