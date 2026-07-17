@@ -377,15 +377,30 @@
     #value-stack { padding: 80px 0; background: var(--white); }
     .value-stack-inner {
       display: flex;
-      gap: 48px;
+      gap: 46px;
       align-items: flex-start;
-      margin-bottom: 56px;
+      margin-bottom: -200px;
+      position: relative;
+      min-height: 520px;
     }
     
     .value-mockup {
       width: 300px;
       min-width: 300px;
       height: 500px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 20px;
+      top: -100px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .value-content {
+      position: relative;
+      z-index: 1;
+      margin-left: 360px;
+      width: calc(100% - 360px);
     }
     
     /* Adiciona animação de flutuar (float) às imagens de mockup */
