@@ -9,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://unpkg.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Poppins:wght@400;600;700;800;900&display=swap" />
   <link rel="preload" as="image" type="image/webp" href="imagens/pagina_1.png" fetchpriority="high" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sales-pop.css" />
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -567,8 +568,56 @@
     </div>
   </div>
 
+  <aside
+    id="sales-pop"
+    class="sales-pop"
+    aria-live="polite"
+    aria-atomic="true"
+    aria-hidden="true"
+  >
+    <div class="sales-pop__card" role="status">
+      <button type="button" class="sales-pop__close" aria-label="Fechar notificação">
+        <svg viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M2 2l8 8M10 2 2 10" />
+        </svg>
+      </button>
+
+      <div class="sales-pop__icon-wrap" aria-hidden="true">
+        <div class="sales-pop__icon-box">
+          <svg class="sales-pop__icon" viewBox="0 0 17 21" fill="none">
+            <path d="M8.5 19.1c3.08-3.73 6.15-6.8 6.15-10.68A6.15 6.15 0 0 0 2.35 8.42c0 3.88 3.07 6.95 6.15 10.68Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="8.5" cy="8.1" r="2.2" stroke="currentColor" stroke-width="1.7"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="sales-pop__content">
+        <div class="sales-pop__topline">
+          <strong class="sales-pop__name">Fernanda</strong>
+          <span class="sales-pop__location">São Paulo • SP</span>
+        </div>
+
+        <div class="sales-pop__message">
+          <span class="sales-pop__label">acabou de adquirir</span>
+          <strong class="sales-pop__product">Kit Completo</strong>
+        </div>
+
+        <div class="sales-pop__meta">
+          <span class="sales-pop__dot"></span>
+          <span class="sales-pop__time">HÁ 1 MINUTO</span>
+        </div>
+      </div>
+
+      <svg class="sales-pop__city" viewBox="0 0 78 42" fill="none" aria-hidden="true">
+        <path d="M8 34V23h8v11m6 0V17h9v17m6 0V26h8v8m6 0V20h10v14m6 0V12h9v22" />
+        <path d="M4 37h70" />
+        <path d="M12 15h4m22-8h4m16 5h4" />
+      </svg>
+    </div>
+  </aside>
+
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="script.js"></script>
+  <script src="sales-pop.js"></script>
 </body>
 </html>
-
