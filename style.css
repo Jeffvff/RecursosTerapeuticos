@@ -1065,15 +1065,15 @@
       align-items: center;
       gap: 4px;
       color: var(--red);
-      font-size: 13px;
+      font-size: 20px;
       font-weight: 700;
       text-decoration: none;
       animation: bounce-arrow 1.4s ease-in-out infinite;
     }
 
     .offer-link-icon {
-      width: 22px;
-      height: 22px;
+      width: 27px;
+      height: 27px;
     }
 
     .pricing-countdown-tag {
