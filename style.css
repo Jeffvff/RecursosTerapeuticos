@@ -385,7 +385,7 @@
     .value-mockup {
       width: 300px;
       min-width: 300px;
-      height: auto;
+      height: 500px;
     }
     
     /* Adiciona animação de flutuar (float) às imagens de mockup */
@@ -1064,7 +1064,7 @@
       flex-direction: column;
       align-items: center;
       gap: 4px;
-      color: var(--teal);
+      color: var(--red);
       font-size: 13px;
       font-weight: 700;
       text-decoration: none;
